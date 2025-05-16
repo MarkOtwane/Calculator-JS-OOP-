@@ -1,8 +1,5 @@
 class Calculator{
-        constructor(number, operator, results){
-            this.number = number;
-            this.operator= operator;
-            this.results = results;
+        constructor(){
             
         }
         // function that will display all numbers and operators
@@ -86,9 +83,10 @@ class Calculator{
         }
 
         display.textContent = result;
+        expression = "";
     });
         
-
+}
 
 }
 // create the Object
