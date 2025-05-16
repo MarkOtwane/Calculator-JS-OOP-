@@ -5,15 +5,9 @@ class Calculator{
         this.results = results;
         
     }
-    //validate the input
-    validate(){
-        if(isNaN(this.number)){
-            console.log("Only numbers Allowed No other character")
-        }
-    }
     // function that will display all numbers and operators
     numberOperator(){
-        this.validate();
+    ;
         const numberList = document.getElementById("numbers");
         numberList.innerHTML = `
         <div class="operators">
@@ -40,28 +34,25 @@ class Calculator{
         const numberButtons = document.querySelectorAll('.nums');
         const operatorButtons = document.querySelectorAll('.ops');
         const equalsButton = document.getElementById('equals');
-    }
-    //function to add
-    addition(){
-        this.validate()
-        //number clicked and the operator then it console.logs the output
 
-    }
-    // function to subtract
-    subtraction(){
-        this.validate()
+        const display = document.getElementById("display");
 
-    }
-    // function for multiplication
-    multiplication(){
-        this.validate()
+                numberButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                display.textContent += button.textContent;
+            });
+        });
 
+        operatorButtons.forEach(button => {
+            button.addEventListener("click", () => {
+            display.textContent += button.textContent;
+        });
+    
+        });
     }
-    //fuction for division
-    division(){
-        this.valitade()
+    
 
-    }
+    
 }
 // create the Object
 const calc = new Calculator();
