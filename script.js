@@ -54,17 +54,7 @@ class Calculator{
                     display.textContent = expression; 
             });
             });
-        //     equalsButton.forEach(button => {
-        //         button.addEventListener("click",()=>{
-        //             // how to get the element from the numberButton and operatorButton then do the operation using theif else statement such that when a  + sign is clicked the output will be the sum and it should display on the screen
-        //             // display.textContent += button.textContent;
-        //             expression += button.textContent;          // build expression
-        //             display.textContent = expression; 
-        //         });
-        //     })
-        // }
-
-    // });
+     // how to get the element from the numberButton and operatorButton then do the operation using theif else statement such that when a  + sign is clicked the output will be the sum and it should display on the screen
 
     //Handle equals click
     equalsButton.addEventListener("click", () => {
@@ -92,7 +82,18 @@ class Calculator{
     });
 
     // Add the edit functionality
-    editButton.addEventListener("click", ()=>{});
+    editButton.addEventListener("click", () => {
+        // Remove the last character from the expression
+        expression = expression.trim().slice(0, -1);
+        
+        // Also remove any trailing operator spacing (optional)
+        if (expression.endsWith("+") || expression.endsWith("-") || expression.endsWith("*") || expression.endsWith("/")) {
+            expression = expression.trim(); // remove any trailing spaces
+        }
+    
+        display.textContent = expression;
+    });
+    
         
 }
 
