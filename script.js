@@ -8,25 +8,29 @@ class Calculator{
             const numberList = document.getElementById("numbers");
             let expression = ""; // store numbers and operator as a string
             numberList.innerHTML = `
-            <div class="operators">
-                <button class="ops">+</button>
-                <button class="ops">-</button>
-                <button class="ops">*</button>
-                <button class="ops">/</button>
+            <div class="allContent">
+                <div class="operators">
+                    <button class="ops">+</button>
+                    <button class="ops">-</button>
+                    <button class="ops">*</button>
+                    <button class="ops">/</button>
+                </div>
+                <div class="numberTotal">
+                    <button class = "nums">1</button>
+                    <button class = "nums">2</button>
+                    <button class = "nums">3</button>
+                    <button class = "nums">4</button>
+                    <button class = "nums">5</button>
+                    <button class = "nums">6</button>
+                    <button class = "nums">7</button>
+                    <button class = "nums">8</button>
+                    <button class = "nums">9</button>
+                    <button class = "nums">0</button>
+                    <button id = "equals">=</button>
+                    <button id="edit"><<</button>
+                </div>
             </div>
-            <div class="numberTotal">
-                <button class = "nums">1</button>
-                <button class = "nums">2</button>
-                <button class = "nums">3</button>
-                <button class = "nums">4</button>
-                <button class = "nums">5</button>
-                <button class = "nums">6</button>
-                <button class = "nums">7</button>
-                <button class = "nums">8</button>
-                <button class = "nums">9</button>
-                <button class = "nums">0</button>
-            </div>
-            <button id = "equals">=</button>
+            
             `;
             const numberButtons = document.querySelectorAll('.nums');
             const operatorButtons = document.querySelectorAll('.ops');
