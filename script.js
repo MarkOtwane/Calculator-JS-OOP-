@@ -35,6 +35,7 @@ class Calculator{
             const numberButtons = document.querySelectorAll('.nums');
             const operatorButtons = document.querySelectorAll('.ops');
             const equalsButton = document.getElementById('equals');
+            const editButton = document.getElementById("edit");
 
             const display = document.getElementById("display");
 
@@ -89,6 +90,9 @@ class Calculator{
         display.textContent = result;
         expression = "";
     });
+
+    // Add the edit functionality
+    editButton.addEventListener("click", ()=>{});
         
 }
 
